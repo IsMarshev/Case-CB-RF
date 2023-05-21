@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+    <div class="frame1">
+        <form method="post">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">Отправить</button>
+        </form>
+        <div class = 'progress-bar'>
+            <p>Анализ обращения:</p>
+            <p>Запрос:</p><div class="progress">
+                <div class="progress-bar-request" role="progressbar" style="width: {{ request }}%;"
+                    aria-valuenow="{{ request }}" aria-valuemin="0" aria-valuemax="100">{{ request }}%</div>
+            </div>
+            <p>Инцидент: </p><div class="progress">
+                <div class="progress-bar-accident" role="progressbar" style="width: {{ accident }}%;"
+                    aria-valuenow="{{ accident }}" aria-valuemin="0" aria-valuemax="100">{{ accident }}%</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    background-color: #f5e8ff;
+  }
+.frame1{
+    display: flex;
+}
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    /* background-color: #f1f1f1; */
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #0080ff;
+  }
+  
+  form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  p {
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: hsl(0, 0%, 33%);
+  }
+.progress {
+    margin: 25px 15px 25px 25px;
+    width: 200px;
+    border: 2px solid #47554d;
+    /* height: 30px; */
+    height: 18px;
+    border-radius: 15px;
+}
+
+
+
+@keyframes fill-bar {
+    from {width: 10%;}
+    to {width: 100%;}
+}
+
+.progress-bar{
+    height: fit-content;
+    background-color:white;
+    border-radius: 5px;
+}
+
+.progress-bar-request {
+    background-color: #02ca10;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.progress-bar-accident {
+    background-color: #ca0202;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+  
